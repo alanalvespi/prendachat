@@ -81,8 +81,8 @@ function timeFormat(msTime) {
 
 $(document).ready(function() {
   //setup "global" variables first
-  var socket = io.connect();
-  //var socket = io.connect("127.0.0.1:3000");
+  //var socket = io.connect();
+  var socket = io.connect("127.0.0.1:8080");
   //var socket = io.connect("192.168.15.32:3000");
   //var socket = io.connect("http://prendanetchat.herokuapp.com");
 
