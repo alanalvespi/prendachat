@@ -13,7 +13,7 @@ app.configure(function() {
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(express.static(__dirname + '/public'));
-	//app.use('/components', express.static(__dirname + '/components'));
+	app.use('/components', express.static(__dirname + '/components'));
 	app.use('/js', express.static(__dirname + '/js'));
 	app.use('/icons', express.static(__dirname + '/icons'));
 	app.set('views', __dirname + '/views');
@@ -33,9 +33,9 @@ app.get('/', function(req, res) {
   res.render('index.html');
 });
 
-//server.listen(app.get('port'), app.get('ipaddr'), function(){
-//	console.log('Express server listening on  IP: ' + app.get('ipaddr') + ' and port ' + app.get('port'));
-//});
+server.listen(app.get('port'), app.get('ipaddr'), function(){
+	console.log('Express server listening on  IP: ' + app.get('ipaddr') + ' and port ' + app.get('port'));
+});
 app.listen(app.get('port'), function() {
   console.log("Node app is running on port:" + app.get('port'))
 })
